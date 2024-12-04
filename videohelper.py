@@ -1,16 +1,16 @@
 import scrapetube
-from langchain.document_loaders.generic import GenericLoader
-from langchain.document_loaders import YoutubeAudioLoader
-from langchain.document_loaders.parsers import OpenAIWhisperParser
+from langchain_community.document_loaders.generic import GenericLoader
+from langchain_community.document_loaders import YoutubeAudioLoader
+from langchain_community.document_loaders.parsers.audio import OpenAIWhisperParser
 import os
 from dotenv import load_dotenv
 from youtubevideo import YoutubeVideo
 
 load_dotenv()
 
-my_key_openai = os.getenv("openai_apikey")
+my_key_openai = os.getenv("OPENAI_API_KEY")
 
-
+print(my_key_openai)
 # 1 Transcription
 def get_video_transcript(url):
     target_dir = "./audios/"
