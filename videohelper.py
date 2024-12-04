@@ -11,7 +11,7 @@ load_dotenv()
 my_key_openai = os.getenv("openai_apikey")
 
 
-# 1 Transkripsiyon
+# 1 Transcription
 def get_video_transcript(url):
     target_dir = "./audios/"
 
@@ -28,14 +28,14 @@ def get_video_transcript(url):
     return video_transcript_docs
 
 
-# 2 Youtube Araması
+# 2 YouTube Searching
 
 def get_videos_for_search_term(search_term, video_count=1, sorting_criteria="relevance"):
     convert_sorting_option = {
-        "En İlgili": "relevance",
-        "Tarihe Göre": "upload_date",
-        "İzlenme Sayısı": "view_count",
-        "Beğeni Sayısı": "rating"
+        "Relevance": "relevance",
+        "Upload Date": "upload_date",
+        "View Count": "view_count",
+        "Rating": "rating"
     }
 
     videos = scrapetube.get_search(query=search_term, limit=video_count,
