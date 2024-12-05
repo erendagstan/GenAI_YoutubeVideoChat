@@ -10,7 +10,6 @@ load_dotenv()
 
 my_key_openai = os.getenv("OPENAI_API_KEY")
 
-print(my_key_openai)
 # 1 Transcription
 def get_video_transcript(url):
     target_dir = "./audios/"

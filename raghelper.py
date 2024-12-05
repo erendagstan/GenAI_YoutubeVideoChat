@@ -11,7 +11,7 @@ load_dotenv()
 my_key_openai = os.getenv("OPENAI_API_KEY")
 my_key_google = os.getenv("GEMINI_API_KEY")
 
-llm_gemini = ChatGoogleGenerativeAI(google_api_key=my_key_google, model="gemini_pro")
+llm_gemini = ChatGoogleGenerativeAI(google_api_key=my_key_google, model="gemini-1.5-flash")
 
 embeddings = OpenAIEmbeddings(api_key=my_key_openai)
 
